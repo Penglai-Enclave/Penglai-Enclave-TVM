@@ -1,0 +1,15 @@
+[submodule "penglai-buildroot"]
+	path = penglai-buildroot
+	url = git@github.com:Penglai-Enclave/penglai-buildroot.git
+[submodule "Penglai-sdk-TVM"]
+	path = Penglai-sdk-TVM
+	url = git@github.com:Penglai-Enclave/Penglai-sdk-TVM.git
+[submodule "Penglai-Linux-TVM"]
+	path = Penglai-Linux-TVM
+	url = git@github.com:Penglai-Enclave/Penglai-Linux-TVM.git
+[submodule "Penglai-Opensbi-TVM"]
+	path = Penglai-Opensbi-TVM
+	url = git@github.com:Penglai-Enclave/Penglai-Opensbi-TVM.git
+[submodule "penglai-qemu"]
+	path = penglai-qemu
+	url = git@github.com:Penglai-Enclave/penglai-qemu.git

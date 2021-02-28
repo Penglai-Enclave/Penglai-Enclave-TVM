@@ -34,7 +34,6 @@ buildroot_rootfs_wrkdir := $(wrkdir)/buildroot_rootfs
 buildroot_rootfs_ext := $(buildroot_rootfs_wrkdir)/images/rootfs.ext4
 buildroot_rootfs_config := $(confdir)/buildroot_rootfs_config
 
-# linux_srcdir := $(srcdir)/linux
 linux_srcdir := $(srcdir)/Penglai-Linux-TVM
 linux_wrkdir := $(wrkdir)/linux-5.10.2
 linux_defconfig := $(confdir)/linux_defconfig
@@ -55,7 +54,6 @@ target_platform := pt_area
 qemu_srcdir := $(srcdir)/penglai-qemu
 qemu_wrkdir := $(wrkdir)/riscv-qemu
 qemu := $(qemu_wrkdir)/prefix/bin/qemu-system-riscv64
-qemu32 := $(qemu_wrkdir)/prefix/bin/qemu-system-riscv32
 
 rootfs := $(wrkdir)/rootfs.bin
 
@@ -130,18 +128,6 @@ $(qemu): $(qemu_srcdir)
 qemu-clean:
 	rm -rf $(qemu_wrkdir)
 
-$(qemu32): $(qemu_srcdir)
-	rm -rf $(qemu_wrkdir)
-	mkdir -p $(qemu_wrkdir)
-	mkdir -p $(dir $@)
-	cd $(qemu_wrkdir) && $</configure \
-		--prefix=$(dir $(abspath $(dir $@))) \
-		--target-list=riscv32-softmmu
-		#--target-list=riscv64-softmmu
-	$(MAKE) -C $(qemu_wrkdir)
-	$(MAKE) -C $(qemu_wrkdir) install
-	touch -c $@
-
 $(rootfs): $(buildroot_rootfs_ext)
 	cp $< $@
 
@@ -151,13 +137,10 @@ vmlinux: $(vmlinux)
 
 .PHONY: clean
 clean:
-#	rm -rf -- $(linux_wrkdir)/vmlinux
-	rm -rf -- $(pk_wrkdir) $(linux_wrkdir)/vmlinux
+	rm -rf -- $(linux_wrkdir)/vmlinux
 	cd $(sdk_srcdir) && PENGLAI_SDK=$(sdk_srcdir) make clean && cd -
 	cd $(sdk_srcdir)/enclave-driver && make clean && cd -
-#	rm -rf -- $(wrkdir) $(linux_wrkdir)/vmlinux
-#	rm -rf -- $(wrkdir)
-#	rm -rf -- $(wrkdir) $(toolchain_dest)
+	cd $(opensbi) && make clean && cd -
 
 include $(sdk_srcdir)/file.mk
 # FIXME: Here we always re-compile sdk using the force target
@@ -167,11 +150,7 @@ $(sdk): $(linux_image) force
 	cd $(sdk_srcdir)/enclave-driver && make
 	cd $(sdk_srcdir) && PENGLAI_SDK=$(sdk_srcdir) MULTILIB_TOOLCHAIN=$(MULTILIB_TOOLCHAIN) make
 	cp -r $(SDK_FILES) $(copy_dir)
-	# cd -
-	# cd $(sdk_srcdir) && PENGLAI_SDK=$(sdk_srcdir) MULTILIB_TOOLCHAIN=$(MULTILIB_TOOLCHAIN) make
-	# cd -
-	# # Copy the compiled files to copy-files
-	# cp -r $(SDK_FILES) $(copy_dir)
+	
 sdk: $(sdk)
 
 .PHONY: qemu

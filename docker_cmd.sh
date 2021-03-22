@@ -66,7 +66,14 @@ fi
 if [[ $1 == *"docker"* ]]; then
 	echo "Run: run docker"
 	#sudo docker run --privileged --cap-add=ALL  -v $(pwd):/home/penglai/penglai-enclave -w /home/penglai/penglai-enclave --rm -it ddnirvana/penglai-enclave:v0.2
-	docker run -v $(pwd):/home/penglai/penglai-enclave -w /home/penglai/penglai-enclave --rm -it ddnirvana/penglai-enclave:v0.4
+	docker run -v $(pwd):/home/penglai/penglai-enclave -w /home/penglai/penglai-enclave --rm -it ddnirvana/penglai-enclave:v0.4 bash scripts/source.sh
+	exit 0
+fi
+
+# copy files
+if [[ $1 == *"copy"* ]]; then
+	echo "copy files"
+    sh scripts/copy.sh
 	exit 0
 fi
 

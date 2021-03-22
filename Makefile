@@ -142,14 +142,14 @@ clean:
 	cd $(sdk_srcdir)/enclave-driver && make clean && cd -
 	cd $(opensbi) && make clean && cd -
 
-include $(sdk_srcdir)/file.mk
+# include $(sdk_srcdir)/file.mk
 # FIXME: Here we always re-compile sdk using the force target
 .PHONY: force
 sdk := $(sdk_srcdir)/enclave-driver/penglai.ko
 $(sdk): $(linux_image) force
 	cd $(sdk_srcdir)/enclave-driver && make
 	cd $(sdk_srcdir) && PENGLAI_SDK=$(sdk_srcdir) MULTILIB_TOOLCHAIN=$(MULTILIB_TOOLCHAIN) make
-	cp -r $(SDK_FILES) $(copy_dir)
+	#cp -r $(SDK_FILES) $(copy_dir)
 	
 sdk: $(sdk)
 

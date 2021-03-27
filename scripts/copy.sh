@@ -111,7 +111,8 @@ if [ ! -d "copy-files/small-demo" ] ; then
 fi
 
 export small_demo_dir=$PWD/Penglai-sdk-TVM/demo/small-demo
-cp $small_demo_dir/small-demo copy-files/small-demo
+cp $small_demo_dir/small-demo2/small-demo2 copy-files/small-demo
+cp $small_demo_dir/small-demo16/small-demo16 copy-files/small-demo
 
 
 #############

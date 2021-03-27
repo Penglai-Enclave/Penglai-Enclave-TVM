@@ -4,8 +4,4 @@ work/
 vivado*.jou
 vivado*.log
 .cache.mk
-copy-files/*
-!copy-files/empty
-!copy-files/mknod.sh
-!copy-files/dummy
 /source.sh

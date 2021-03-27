@@ -5,3 +5,7 @@ vivado*.jou
 vivado*.log
 .cache.mk
 /source.sh
+copy-files/*
+!copy-files/*.sh
+!copy-files/dummy
+!copy-files/empty

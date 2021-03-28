@@ -98,7 +98,7 @@ fi
 export ipc_dir=$PWD/Penglai-sdk-TVM/demo/ipc
 cp $ipc_dir/caller/caller copy-files/ipc
 cp $ipc_dir/server/server copy-files/ipc
-cp $ipc_dir/server1/server1 copy-files/ipc
+#cp $ipc_dir/server1/server1 copy-files/ipc
 cp $ipc_dir/test-caller/test-caller copy-files/ipc
 
 
@@ -111,7 +111,8 @@ if [ ! -d "copy-files/small-demo" ] ; then
 fi
 
 export small_demo_dir=$PWD/Penglai-sdk-TVM/demo/small-demo
-cp $small_demo_dir/small-demo copy-files/small-demo
+cp $small_demo_dir/small-demo2/small-demo2 copy-files/small-demo
+cp $small_demo_dir/small-demo16/small-demo16 copy-files/small-demo
 
 
 #############
@@ -123,7 +124,7 @@ if [ ! -d "copy-files/fastboot" ] ; then
 fi
 
 export fastboot_dir=$PWD/Penglai-sdk-TVM/demo/fastboot
-cp $fastboot_dir/host-shm/host-shm copy-files/fastboot
-cp $fastboot_dir/host-no-shm/host-no-shm copy-files/fastboot
-cp $fastboot_dir/shadow-host-shm/shadow-host-shm copy-files/fastboot
+#cp $fastboot_dir/host-shm/host-shm copy-files/fastboot
+#cp $fastboot_dir/host-no-shm/host-no-shm copy-files/fastboot
+#cp $fastboot_dir/shadow-host-shm/shadow-host-shm copy-files/fastboot
 cp $fastboot_dir/shadow-host-no-shm/shadow-host-no-shm copy-files/fastboot

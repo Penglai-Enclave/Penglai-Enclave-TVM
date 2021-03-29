@@ -162,9 +162,7 @@ if [ ! -d "copy-files/fastboot" ] ; then
 fi
 
 export fastboot_dir=$PWD/Penglai-sdk-TVM/demo/fastboot
-#cp $fastboot_dir/host-shm/host-shm copy-files/fastboot
-#cp $fastboot_dir/host-no-shm/host-no-shm copy-files/fastboot
-#cp $fastboot_dir/shadow-host-shm/shadow-host-shm copy-files/fastboot
+cp $fastboot_dir/host-no-shm/host-no-shm copy-files/fastboot
 cp $fastboot_dir/shadow-host-no-shm/shadow-host-no-shm copy-files/fastboot
 
 ################

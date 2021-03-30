@@ -39,6 +39,8 @@ linux_wrkdir := $(wrkdir)/linux-5.10.2
 linux_defconfig := $(confdir)/linux_defconfig
 
 linux_image := $(linux_wrkdir)/arch/riscv/boot/Image
+linux_dtb := $(linux_wrkdir)/arch/riscv/boot/dts/sifive/hifive-unleashed-a00.dtb
+linux_dtb2 := $(wrkdir)/../sifive.freedom.unleashed.u500vc707devkit.U500VC707DevKitConfig.dtb
 linux_image_stripped := $(linux_srcdir)/vmlinux-stripped
 
 vmlinux := $(linux_wrkdir)/vmlinux
@@ -112,7 +114,7 @@ $(opensbi): $(linux_image) $(sdk)
 	cd $(opensbi) && \
 	export CROSS_COMPILE=riscv64-unknown-elf- && \
 	make clean && \
-	make PLATFORM=generic FW_PAYLOAD_PATH=${linux_image}
+	make PLATFORM=generic FW_PAYLOAD_PATH=${linux_image} FW_FDT_PATH=${linux_dtb}
 	# make PLATFORM=generic FW_PAYLOAD_PATH=$(linux_image_stripped)
 
 $(qemu): $(qemu_srcdir)
@@ -155,7 +157,7 @@ sdk: $(sdk)
 
 .PHONY: qemu
 qemu: $(qemu)
-	$(qemu) -nographic -M virt -m 4096 -smp 1  -kernel $(opensbi)/build/platform/generic/firmware/fw_payload.elf \
+	$(qemu) -nographic -M virt -m 1024M -smp 1  -kernel $(opensbi)/build/platform/generic/firmware/fw_payload.elf \
 	-drive file=/home/penglai/penglai-enclave/work/rootfs.bin,format=raw,id=hd0 -device virtio-blk-device,drive=hd0 \
 	-netdev user,id=net0 -device virtio-net-device,netdev=net0 \
 	-append "root=/dev/vda rw console=ttyS0 earlyprintk=ttyS0"

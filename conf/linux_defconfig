@@ -201,7 +201,7 @@ CONFIG_HZ=250
 #
 # Boot options
 #
-CONFIG_CMDLINE=""
+CONFIG_CMDLINE="loglevel=7"
 # end of Boot options
 
 #

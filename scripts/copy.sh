@@ -194,3 +194,14 @@ cp $serverless_test_dir/entry_enclave copy-files/serverless-test
 cp $serverless_test_dir/imageResize copy-files/serverless-test
 cp $serverless_test_dir/imageRotate copy-files/serverless-test
 cp $serverless_test_dir/imageErosion copy-files/serverless-test
+
+if [ ! -d "copy-files/baseline-linux" ] ; then
+  mkdir copy-files/baseline-linux
+fi
+
+export serverless_base_dir=$PWD/Penglai-sdk-TVM/demo/image-process/serverless_test/baseline-linux
+cp $serverless_base_dir/imageErosion copy-files/baseline-linux
+cp $serverless_base_dir/imageResize copy-files/baseline-linux
+cp $serverless_base_dir/imageRotate copy-files/baseline-linux
+cp $serverless_base_dir/entry copy-files/baseline-linux
+cp $serverless_base_dir/serverless-user copy-files/baseline-linux

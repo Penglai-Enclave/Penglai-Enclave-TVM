@@ -133,6 +133,7 @@ cp $map_reduce_dir/reduce2/reduce2 copy-files/map-reduce
 cp $map_reduce_dir/map4/map4 copy-files/map-reduce
 cp $map_reduce_dir/mphost4/mphost4 copy-files/map-reduce
 cp $map_reduce_dir/reduce4/reduce4 copy-files/map-reduce
+cp $map_reduce_dir/mphost-normal/mphost-normal copy-files/map-reduce
 
 
 ##############
@@ -176,8 +177,8 @@ if [ ! -d "copy-files/fastboot" ] ; then
 fi
 
 export fastboot_dir=$PWD/Penglai-sdk-TVM/demo/fastboot
-#cp $fastboot_dir/host-no-shm/host-no-shm copy-files/fastboot
-#cp $fastboot_dir/shadow-host-no-shm/shadow-host-no-shm copy-files/fastboot
+cp $fastboot_dir/host-no-shm/host-no-shm copy-files/fastboot
+cp $fastboot_dir/shadow-host-no-shm/shadow-host-no-shm copy-files/fastboot
 
 ################
 # serverless
@@ -188,19 +189,19 @@ if [ ! -d "copy-files/serverless-test" ] ; then
 fi
 
 export serverless_test_dir=$PWD/Penglai-sdk-TVM/demo/image-process/serverless_test
-#cp $serverless_test_dir/serverless-user copy-files/serverless-test
-#cp $serverless_test_dir/entry_enclave copy-files/serverless-test
-#cp $serverless_test_dir/imageResize copy-files/serverless-test
-#cp $serverless_test_dir/imageRotate copy-files/serverless-test
-#cp $serverless_test_dir/imageErosion copy-files/serverless-test
+cp $serverless_test_dir/serverless-user copy-files/serverless-test
+cp $serverless_test_dir/entry_enclave copy-files/serverless-test
+cp $serverless_test_dir/imageResize copy-files/serverless-test
+cp $serverless_test_dir/imageRotate copy-files/serverless-test
+cp $serverless_test_dir/imageErosion copy-files/serverless-test
 
 if [ ! -d "copy-files/baseline-linux" ] ; then
   mkdir copy-files/baseline-linux
 fi
 
 export serverless_base_dir=$PWD/Penglai-sdk-TVM/demo/image-process/serverless_test/baseline-linux
-#cp $serverless_base_dir/imageErosion copy-files/baseline-linux
-#cp $serverless_base_dir/imageResize copy-files/baseline-linux
-#cp $serverless_base_dir/imageRotate copy-files/baseline-linux
-#cp $serverless_base_dir/entry copy-files/baseline-linux
-#cp $serverless_base_dir/serverless-user copy-files/baseline-linux
+cp $serverless_base_dir/imageErosion copy-files/baseline-linux
+cp $serverless_base_dir/imageResize copy-files/baseline-linux
+cp $serverless_base_dir/imageRotate copy-files/baseline-linux
+cp $serverless_base_dir/entry copy-files/baseline-linux
+cp $serverless_base_dir/serverless-user copy-files/baseline-linux

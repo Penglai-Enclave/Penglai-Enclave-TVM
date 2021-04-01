@@ -66,6 +66,14 @@ cp $rv8_test_dir/primes/primes copy-files/rv8-test/
 cp $rv8_test_dir/qsort/qsort copy-files/rv8-test/
 cp $rv8_test_dir/sha512/sha512 copy-files/rv8-test/
 
+export rv8_test_dir=$PWD/Penglai-sdk-TVM/demo/rv8-baseline
+cp $rv8_test_dir/aes/aes-baseline copy-files/rv8-test/
+cp $rv8_test_dir/dhrystone/dhrystone-baseline copy-files/rv8-test/
+cp $rv8_test_dir/norx/norx-baseline copy-files/rv8-test/
+cp $rv8_test_dir/primes/primes-baseline copy-files/rv8-test/
+cp $rv8_test_dir/qsort/qsort-baseline copy-files/rv8-test/
+cp $rv8_test_dir/sha512/sha512-baseline copy-files/rv8-test/
+
 
 ###########
 # coremark
@@ -78,6 +86,8 @@ fi
 export coremark_dir=$PWD/Penglai-sdk-TVM/demo/coremark
 cp $coremark_dir/coremark copy-files/coremark/
 
+export coremark_dir=$PWD/Penglai-sdk-TVM/demo/coremark-baseline
+cp $coremark_dir/coremark-baseline copy-files/coremark/
 
 #############
 # stress-ng
@@ -138,6 +148,11 @@ cp $ipc_dir/caller/caller copy-files/ipc
 cp $ipc_dir/server/server copy-files/ipc
 #cp $ipc_dir/server1/server1 copy-files/ipc
 cp $ipc_dir/test-caller/test-caller copy-files/ipc
+
+export ipc_dir=$PWD/Penglai-sdk-TVM/demo/ipc-baseline
+#cp $ipc_dir/caller/caller-baseline copy-files/ipc
+#cp $ipc_dir/server/server-baseline copy-files/ipc
+#cp $ipc_dir/test-caller/test-caller-baseline copy-files/ipc
 
 
 ################

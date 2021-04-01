@@ -146,13 +146,12 @@ fi
 export ipc_dir=$PWD/Penglai-sdk-TVM/demo/ipc
 cp $ipc_dir/caller/caller copy-files/ipc
 cp $ipc_dir/server/server copy-files/ipc
-#cp $ipc_dir/server1/server1 copy-files/ipc
 cp $ipc_dir/test-caller/test-caller copy-files/ipc
 
 export ipc_dir=$PWD/Penglai-sdk-TVM/demo/ipc-baseline
-#cp $ipc_dir/caller/caller-baseline copy-files/ipc
-#cp $ipc_dir/server/server-baseline copy-files/ipc
-#cp $ipc_dir/test-caller/test-caller-baseline copy-files/ipc
+cp $ipc_dir/caller/caller-baseline copy-files/ipc
+cp $ipc_dir/server/server-baseline copy-files/ipc
+cp $ipc_dir/test-caller/test-caller-baseline copy-files/ipc
 
 
 ################
@@ -177,8 +176,8 @@ if [ ! -d "copy-files/fastboot" ] ; then
 fi
 
 export fastboot_dir=$PWD/Penglai-sdk-TVM/demo/fastboot
-cp $fastboot_dir/host-no-shm/host-no-shm copy-files/fastboot
-cp $fastboot_dir/shadow-host-no-shm/shadow-host-no-shm copy-files/fastboot
+#cp $fastboot_dir/host-no-shm/host-no-shm copy-files/fastboot
+#cp $fastboot_dir/shadow-host-no-shm/shadow-host-no-shm copy-files/fastboot
 
 ################
 # serverless
@@ -189,19 +188,19 @@ if [ ! -d "copy-files/serverless-test" ] ; then
 fi
 
 export serverless_test_dir=$PWD/Penglai-sdk-TVM/demo/image-process/serverless_test
-cp $serverless_test_dir/serverless-user copy-files/serverless-test
-cp $serverless_test_dir/entry_enclave copy-files/serverless-test
-cp $serverless_test_dir/imageResize copy-files/serverless-test
-cp $serverless_test_dir/imageRotate copy-files/serverless-test
-cp $serverless_test_dir/imageErosion copy-files/serverless-test
+#cp $serverless_test_dir/serverless-user copy-files/serverless-test
+#cp $serverless_test_dir/entry_enclave copy-files/serverless-test
+#cp $serverless_test_dir/imageResize copy-files/serverless-test
+#cp $serverless_test_dir/imageRotate copy-files/serverless-test
+#cp $serverless_test_dir/imageErosion copy-files/serverless-test
 
 if [ ! -d "copy-files/baseline-linux" ] ; then
   mkdir copy-files/baseline-linux
 fi
 
 export serverless_base_dir=$PWD/Penglai-sdk-TVM/demo/image-process/serverless_test/baseline-linux
-cp $serverless_base_dir/imageErosion copy-files/baseline-linux
-cp $serverless_base_dir/imageResize copy-files/baseline-linux
-cp $serverless_base_dir/imageRotate copy-files/baseline-linux
-cp $serverless_base_dir/entry copy-files/baseline-linux
-cp $serverless_base_dir/serverless-user copy-files/baseline-linux
+#cp $serverless_base_dir/imageErosion copy-files/baseline-linux
+#cp $serverless_base_dir/imageResize copy-files/baseline-linux
+#cp $serverless_base_dir/imageRotate copy-files/baseline-linux
+#cp $serverless_base_dir/entry copy-files/baseline-linux
+#cp $serverless_base_dir/serverless-user copy-files/baseline-linux

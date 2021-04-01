@@ -7,5 +7,4 @@ vivado*.log
 /source.sh
 copy-files/*
 !copy-files/*.sh
-!copy-files/dummy
-!copy-files/empty
+!copy-files/.empty

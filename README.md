@@ -14,7 +14,7 @@ All the tests in AE are based on this new version. Note, our final version paper
 
 1. Git: Penglai uses git for version control
 2. Docker: Penglai uses docker to create the build environment
-
+3. Linux: All the testing scripts are developed for Linux (e.g., ubuntu-18.04 we used), which may be incompatible with mac or windows. 
 ## Getting started (artifact download) ##
 
 We have open-sourced our project, see in the git repo:  
@@ -329,3 +329,4 @@ In the case study of MapReduce, we run several mappers and reducers in the encla
   We have run MapReduce on Xilinx VC707 FPGA board with SiFive Freedom U500. The results are shown below:
 
   ![](benchmark-images/run-map-reduce-fpga.png)
+  If you want to run Penglai on FPGA borad, you can download our bit stream of Penglai Rocket core (url:https://github.com/Penglai-Enclave/Penglai-Enclave-RocketCore), which is based on Freedom U500. 

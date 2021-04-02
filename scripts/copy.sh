@@ -47,22 +47,22 @@ cp $hello_world_dir/hello-world copy-files/hello-world
 #cp $serverless_test_dir/imageRotate copy-files/serverless-test
 #cp $serverless_test_dir/imageErosion copy-files/serverless-test
 #
-################
-## map-reduce
-################
-#
-#if [ ! -d "copy-files/map-reduce" ] ; then
-#  mkdir copy-files/map-reduce
-#fi
-#
-#export map_reduce_dir=$PWD/Penglai-sdk-TVM/demo/map-reduce
-#cp $map_reduce_dir/map/map copy-files/map-reduce
-#cp $map_reduce_dir/mphost/mphost copy-files/map-reduce
-#cp $map_reduce_dir/mphost/input.txt copy-files/map-reduce
-#cp $map_reduce_dir/reduce/reduce copy-files/map-reduce
-#cp $map_reduce_dir/map2/map2 copy-files/map-reduce
-#cp $map_reduce_dir/mphost2/mphost2 copy-files/map-reduce
-#cp $map_reduce_dir/reduce2/reduce2 copy-files/map-reduce
-#cp $map_reduce_dir/map4/map4 copy-files/map-reduce
-#cp $map_reduce_dir/mphost4/mphost4 copy-files/map-reduce
-#cp $map_reduce_dir/reduce4/reduce4 copy-files/map-reduce
+###############
+# map-reduce
+###############
+
+if [ ! -d "copy-files/map-reduce" ] ; then
+ mkdir copy-files/map-reduce
+fi
+
+export map_reduce_dir=$PWD/Penglai-sdk-TVM/demo/map-reduce
+cp $map_reduce_dir/map/map copy-files/map-reduce
+cp $map_reduce_dir/mphost/mphost copy-files/map-reduce
+cp $map_reduce_dir/mphost/input.txt copy-files/map-reduce
+cp $map_reduce_dir/reduce/reduce copy-files/map-reduce
+# cp $map_reduce_dir/map2/map2 copy-files/map-reduce
+# cp $map_reduce_dir/mphost2/mphost2 copy-files/map-reduce
+# cp $map_reduce_dir/reduce2/reduce2 copy-files/map-reduce
+# cp $map_reduce_dir/map4/map4 copy-files/map-reduce
+# cp $map_reduce_dir/mphost4/mphost4 copy-files/map-reduce
+# cp $map_reduce_dir/reduce4/reduce4 copy-files/map-reduce

@@ -1,8 +1,8 @@
-# Artifact for OSDI #15#
+# Artifact for OSDI #15 #
 
 ## Introduction ##
 
-We have **renamed **our project from *HEIMDALL* to *Penglai*! In this document, we just use *Penglai* to represent our enclave system, and we will unify the name in our final version.
+We have **renamed** our project from *HEIMDALL* to *Penglai*! In this document, we just use *Penglai* to represent our enclave system, and we will unify the name in our final version.
 
 Penglai is a software-hardware co-design enclave system. The main claim in our paper is that we make enclave more scalable. For convenience, we provide two simulators (QEMU, Gem5) to evaluate Penglai. 
 

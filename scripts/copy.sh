@@ -60,9 +60,9 @@ cp $map_reduce_dir/map/map copy-files/map-reduce
 cp $map_reduce_dir/mphost/mphost copy-files/map-reduce
 cp $map_reduce_dir/mphost/input.txt copy-files/map-reduce
 cp $map_reduce_dir/reduce/reduce copy-files/map-reduce
-# cp $map_reduce_dir/map2/map2 copy-files/map-reduce
-# cp $map_reduce_dir/mphost2/mphost2 copy-files/map-reduce
-# cp $map_reduce_dir/reduce2/reduce2 copy-files/map-reduce
-# cp $map_reduce_dir/map4/map4 copy-files/map-reduce
-# cp $map_reduce_dir/mphost4/mphost4 copy-files/map-reduce
-# cp $map_reduce_dir/reduce4/reduce4 copy-files/map-reduce
+cp $map_reduce_dir/map2/map2 copy-files/map-reduce
+cp $map_reduce_dir/mphost2/mphost2 copy-files/map-reduce
+cp $map_reduce_dir/reduce2/reduce2 copy-files/map-reduce
+cp $map_reduce_dir/map4/map4 copy-files/map-reduce
+cp $map_reduce_dir/mphost4/mphost4 copy-files/map-reduce
+cp $map_reduce_dir/reduce4/reduce4 copy-files/map-reduce

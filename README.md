@@ -329,4 +329,4 @@ In the case study of MapReduce, we run several mappers and reducers in the encla
   We have run MapReduce on Xilinx VC707 FPGA board with SiFive Freedom U500. The results are shown below:
 
   ![](benchmark-images/run-map-reduce-fpga.png)
-  If you want to run Penglai on FPGA borad, you can download our bit stream of Penglai Rocket core (url:https://github.com/Penglai-Enclave/Penglai-Enclave-RocketCore), which is based on Freedom U500. 
+  If you want to run Penglai on FPGA board, you can download our bitstream of Penglai Rocket core (url:https://github.com/Penglai-Enclave/Penglai-Enclave-RocketCore), which is based on Freedom U500. Our testing scripts are runnable on both QEMU and FPGA platforms.

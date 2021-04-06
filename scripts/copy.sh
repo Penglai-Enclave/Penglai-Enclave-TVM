@@ -31,6 +31,24 @@ fi
 export hello_world_dir=$PWD/Penglai-sdk-TVM/demo/hello-world
 cp $hello_world_dir/hello-world copy-files/hello-world
 
+##############
+# ipc
+##############
+
+if [ ! -d "copy-files/ipc" ] ; then
+  mkdir copy-files/ipc
+fi
+
+export ipc_dir=$PWD/Penglai-sdk-TVM/demo/ipc
+cp $ipc_dir/caller/caller copy-files/ipc
+cp $ipc_dir/server/server copy-files/ipc
+cp $ipc_dir/test-caller/test-caller copy-files/ipc
+
+export ipc_dir=$PWD/Penglai-sdk-TVM/demo/ipc-baseline
+cp $ipc_dir/caller/caller-baseline copy-files/ipc
+cp $ipc_dir/server/server-baseline copy-files/ipc
+cp $ipc_dir/test-caller/test-caller-baseline copy-files/ipc
+
 
 ################
 # serverless

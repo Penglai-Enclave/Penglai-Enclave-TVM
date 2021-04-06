@@ -84,3 +84,16 @@ cp $map_reduce_dir/reduce2/reduce2 copy-files/map-reduce
 cp $map_reduce_dir/map4/map4 copy-files/map-reduce
 cp $map_reduce_dir/mphost4/mphost4 copy-files/map-reduce
 cp $map_reduce_dir/reduce4/reduce4 copy-files/map-reduce
+
+#############
+# FS
+#############
+
+if [ ! -d "copy-files/fs" ] ; then
+  mkdir copy-files/fs
+fi
+
+export fs_dir=$PWD/Penglai-sdk-TVM/demo/FS
+cp $fs_dir/fshost/fshost copy-files/fs
+cp $fs_dir/testfs/testfs copy-files/fs
+cp $fs_dir/littlefs/lfs copy-files/fs

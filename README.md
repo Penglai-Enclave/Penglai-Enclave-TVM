@@ -43,9 +43,7 @@ Enter the terminal with the user name: root, and passwords: penglai.
 
 **Insmod the enclave-driver**
 
-`insmod penglai.ko`
-
-`./mknod.sh`
+`sh install.sh`
 
 And the, you can run a demo, e.g., a hello-world enclave, using 
 

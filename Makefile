@@ -155,7 +155,7 @@ sdk: $(sdk)
 
 .PHONY: qemu
 qemu: $(qemu)
-	$(qemu) -nographic -M virt -m 4096M -smp 4 -kernel $(opensbi)/build/platform/generic/firmware/fw_payload.elf \
+	$(qemu) -nographic -M virt -m 4096M -smp 1 -kernel $(opensbi)/build/platform/generic/firmware/fw_payload.elf \
 	-drive file=/home/penglai/penglai-enclave/work/rootfs.bin,format=raw,id=hd0 -device virtio-blk-device,drive=hd0 \
 	-netdev user,id=net0 -device virtio-net-device,netdev=net0 \
 	-append "root=/dev/vda rw console=ttyS0 earlyprintk=ttyS0"

@@ -2,6 +2,8 @@
 
 Penglai-Enclave is a scalable enclave system for RISC-V architecture.
 
+You can find more details in our online document: [Penglai-doc](https://penglai-doc.readthedocs.io/en/latest/)
+
 ## Quick Start
 
 Penglai uses Docker for building and uses submodules to track different components.

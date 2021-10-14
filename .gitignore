@@ -8,4 +8,5 @@ copy-files/*
 !copy-files/empty
 !copy-files/install.sh
 !copy-files/dummy
+!copy-files/testAll.sh
 /source.sh

@@ -101,12 +101,12 @@ $(linux_image): $(linux_srcdir) $(buildroot_initramfs_sysroot_stamp) force
 	# make -C $(linux_srcdir) mrproper
 	make -C $(linux_srcdir) O=${linux_wrkdir} ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu- defconfig
 	make -C $(linux_srcdir) O=${linux_wrkdir} \
-	CONFIG_INITRAMFS_SOURCE="$(confdir)/initramfs.txt $(buildroot_initramfs_sysroot)" \
-	CONFIG_INITRAMFS_ROOT_UID=$(shell id -u) \
-	CONFIG_INITRAMFS_ROOT_GID=$(shell id -g) \
 	CROSS_COMPILE=riscv64-unknown-linux-gnu- \
 	ARCH=riscv \
 	-j 8
+	# CONFIG_INITRAMFS_SOURCE="$(confdir)/initramfs.txt $(buildroot_initramfs_sysroot)" \
+	# CONFIG_INITRAMFS_ROOT_UID=$(shell id -u) \
+	# CONFIG_INITRAMFS_ROOT_GID=$(shell id -g) \
 
 $(opensbi): $(linux_image) $(sdk)
 	cd $(opensbi) && \

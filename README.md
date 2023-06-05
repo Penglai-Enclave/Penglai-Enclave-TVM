@@ -53,8 +53,7 @@ git submodule update --init --recursive
 
 ~~Now you have everything needed to run Penglai's tests and reproduce the results.~~
 
-Due to the IP consideration, the source code of Gem5-MMT cannot be publicly open-sourced now. 
-If you are interested in reproducing the testing results in AE, please contact us at fengerhu1@sjtu.edu.cn.
+At present, the source code for Gem5-MMT is not openly accessible, in adherence to a request from one of our collaborating partners. However, we are actively working towards making this source code available for academic use. If you wish to reproduce the results in the interim, kindly direct your inquiries to fengerhu1@sjtu.edu.cn.
 
 ## Run an example (Functionality) ##
 

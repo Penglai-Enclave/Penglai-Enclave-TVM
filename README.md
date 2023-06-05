@@ -20,7 +20,6 @@ All the tests in AE are based on this new version. Note, our final version paper
 We have open-sourced our project, see in the git repo:  
 
 - Penglai-Enclave-TVM: https://github.com/Penglai-Enclave/Penglai-Opensbi-TVM.git
-- Penglai-Enclave-Gem5: https://github.com/Penglai-Enclave/Penglai-Enclave-Gem5.git
 
 #### 1. Penglai-Enclave-TVM ####
 
@@ -46,15 +45,8 @@ git submodule update --init --recursive
 
 #### 2. Penglai-Enclave-Gem5 ####
 
-To get the source code of Penglai-Enclave-Gem5, you can use the following scripts:
-
-```
-git clone https://github.com/Penglai-Enclave/Penglai-Enclave-Gem5.git
-```
-
-Artifact code is in the main branch! Make sure the code is up-to-date.
-
-Now you have everything needed to run Penglai's tests and reproduce the results.
+Due to the copyright requirement of our partner, the source code of Gem5-MMT cannot be open-sourced now. 
+If you are interested in reproducing the testing results in AE, please contact us at fengerhu1@sjtu.edu.cn.
 
 ## Run an example (Functionality) ##
 
